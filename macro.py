@@ -6,7 +6,7 @@
 
 # Instructions for using this macro:
 # 
-# If you are using a windows:
+# If you are using a windows (i haven't tested installation on windows but i will test later):
 # 1.) Download Python3 through the microsoft store (make sure u get 3 (i think))
 # 2.) In microsoft powershell, type in pip install pyautogui (a library required to run the script)
 # 3.) Run the command in powershell: "cd C:\Users\YourName\Downloads" (or wherever your macro file is located)
