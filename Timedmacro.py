@@ -6,7 +6,7 @@
 
 # Instructions for using this macro:
 # 
-# If you are using a windows (i haven't tested installation on windows but i will test later):
+# If you are using a windows:
 # 1.) Download Python3 through the microsoft store (make sure u get 3 (i think))
 # 2.) In microsoft powershell, type in pip install pyautogui (a library required to run the script)
 # 3.) Run the command in powershell: "cd C:\Users\YourName\Downloads" (or wherever your macro file is located)
@@ -34,20 +34,20 @@ time.sleep(timer) #This number determines how many seconds the macro will activa
 
 # Text to type
 messages = [ #This is the list of messgaes (You can change it too, but make sure that you add speech marks for each word and a comma after the word)
-    "nice",
-    "hi",
-    "cool",
-    "bye",
-    "this is a test",
-    "wow",
-    "crazy"
+ "La-la-la-lava!",
+  "ch-ch-ch-chicken!",
+    "Steve's Lava Chicken, yeah, it's tasty as hell!",
+        "Ooh, mamacita, now you're ringin' the bell,",
+        "Crispy and juicy, now you're havin' a snack,",
+        "Ooh, super spicy, it's a lava attack!"
 ]
 
+timing = [1, 1, 0.5, 0.5, 0.5, 0.5, 2]
 
 
 while True:
-    message = messages[random.randint(1, len(messages)-1)]
-    pyautogui.typewrite(message)  # This types the message
-    pyautogui.press("enter")      # This presses enter
-
+    for message, pause in zip(messages, timing):
+        pyautogui.typewrite(message)
+        pyautogui.press("enter")
+        time.sleep(pause)
     
